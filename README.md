@@ -13,7 +13,7 @@ The project provides a clean web-based chat interface where users can send messa
 
 - Enter key to send messages
 
-- Shift + Enter for a new line
+- `Shift + Enter` for a new line
 
 - Auto-growing message input
 
@@ -53,9 +53,9 @@ The project provides a clean web-based chat interface where users can send messa
 
 - Google Gemini API
 
-- @google/genai
+- `@google/genai`
 
-- dotenv
+- `dotenv`
 ## Project Structure
 
 ```bash
