@@ -4,12 +4,21 @@ const path = require("path");
 require("dotenv").config();
 
 const app = express();
-const PORT = 3000;
+
+// Render provides PORT automatically.
+// 3000 is used when running locally.
+const PORT = process.env.PORT || 3000;
 
 // Gemini AI
-const model = new GoogleGenAI({
+const ai = new GoogleGenAI({
     apiKey: process.env.GEMENI_API_KEY
 });
+
+// Check API key
+console.log(
+    "Gemini API Key loaded:",
+    !!process.env.GEMENI_API_KEY
+);
 
 // Middleware
 app.use(express.json());
@@ -44,8 +53,18 @@ app.post("/api/chat", async (req, res) => {
             }
         }
 
+        // Add current user message
+        contents.push({
+            role: "user",
+            parts: [
+                {
+                    text: message
+                }
+            ]
+        });
+
         // Send conversation to Gemini
-        const response = await model.models.generateContent({
+        const response = await ai.models.generateContent({
             model: "gemini-3.6-flash",
             contents: contents
         });
@@ -65,6 +84,6 @@ app.post("/api/chat", async (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
 });
