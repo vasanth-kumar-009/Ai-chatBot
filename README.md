@@ -1,9 +1,11 @@
 # AI Chatbot   [![website coderjojo.github.io](https://img.shields.io/website-up-down-green-red/http/coderjojo.github.io/creative-profile-readme.svg)](https://ai-chatbot-ok07.onrender.com)
 
-
 A simple full-stack AI chatbot built with HTML, CSS, JavaScript, Node.js, Express, and Google Gemini API.
 
 The project provides a clean web-based chat interface where users can send messages and receive AI-generated responses from Gemini. The Gemini API key is kept securely on the backend using environment variables.
+
+<img width="1917" height="962" alt="Screenshot 2026-08-14 162817" src="https://github.com/user-attachments/assets/c6895dcb-2707-4886-b1b9-f45554752ea3" />
+
 
 ## Features
 - Clean and responsive chatbot interface
