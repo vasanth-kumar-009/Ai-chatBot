@@ -1,4 +1,5 @@
-# AI Chatbot
+# AI Chatbot   [![website coderjojo.github.io](https://img.shields.io/website-up-down-green-red/http/coderjojo.github.io/creative-profile-readme.svg)](https://ai-chatbot-ok07.onrender.com)
+
 
 A simple full-stack AI chatbot built with HTML, CSS, JavaScript, Node.js, Express, and Google Gemini API.
 
